@@ -1,0 +1,102 @@
+*,
+*:focus {
+  outline: none;
+}
+
+.form {
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(20px); /* Safari 9+, Edge 12+, Chrome 76+ */
+  backdrop-filter: blur(20px);
+}
+.form-item {
+  position: relative;
+  margin: 10px;
+  width: 100%;
+}
+.form-item input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: solid 1px #ccc;
+  transition: all 0.3s ease;
+  padding: 0 15px;
+  border-radius: 10px;
+}
+.form-item input:focus {
+  border-color: #0d76fd;
+}
+.form-item label {
+  position: absolute;
+  cursor: text;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: normal;
+  background: #fff;
+  padding: 0 10px;
+  color: #999;
+  transition: all 0.3s ease;
+}
+.form-item input:focus + label,
+.form-item input:valid + label {
+  font-size: 11px;
+  top: -5px;
+}
+.form-item input:focus + label {
+  color: #0d76fd;
+}
+
+.main-background {
+  background-image: url('./assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.glassmorphism-btn {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  width: 100%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.glassmorphism-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.glassmorphism-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Optional Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.glassmorphism-btn:focus {
+  animation: pulse 1s infinite alternate;
+}
