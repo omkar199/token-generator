@@ -66,7 +66,7 @@ const App = () => {
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider coolMode theme={darkTheme()}>
-          <div className='p-4 main-background bg-indigo-600'>
+          <div className='p-4 main-background' style={{ backgroundColor: '#373B44' }}>
             <div className='relative shadow-lg px-3 py-3 bg-none backdrop-blur-lg rounded-lg'>
               <nav className='flex flex-col md:flex-row justify-between'>
                 <div className='w-full md:w-[200px] flex items-center justify-between'>
